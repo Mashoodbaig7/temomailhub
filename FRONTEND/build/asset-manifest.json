@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.317c1da4.css",
+    "main.js": "/static/js/main.83a7ba0e.js",
+    "static/js/488.2fb641dd.chunk.js": "/static/js/488.2fb641dd.chunk.js",
+    "static/media/empty-inbox.gif": "/static/media/empty-inbox.21fa9a426782a8bac459.gif",
+    "static/media/qr-code.gif": "/static/media/qr-code.5eb1c73d332bead644cd.gif",
+    "static/media/google-play.png": "/static/media/google-play.52f500bf51a0221ce5c6.png",
+    "static/media/logo.gif": "/static/media/logo.425098a7f5367abf59c1.gif",
+    "static/media/apple-store.png": "/static/media/apple-store.3c107767db3c4996b689.png",
+    "index.html": "/index.html",
+    "main.317c1da4.css.map": "/static/css/main.317c1da4.css.map",
+    "main.83a7ba0e.js.map": "/static/js/main.83a7ba0e.js.map",
+    "488.2fb641dd.chunk.js.map": "/static/js/488.2fb641dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.317c1da4.css",
+    "static/js/main.83a7ba0e.js"
+  ]
+}
