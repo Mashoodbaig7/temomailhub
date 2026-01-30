@@ -1,0 +1,194 @@
+/* AdminLayout.css - Enhanced */
+:root {
+  --admin-primary: #16423C;
+  --admin-secondary: #6A9C89;
+  --admin-accent: #C4E4D4;
+  --admin-surface: #FFFFFF;
+  --admin-background: #F5F9F8;
+  --admin-text: #2D3748;
+  --admin-text-light: #718096;
+  --admin-border: #E2E8F0;
+  --admin-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  --admin-shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  --admin-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --sidebar-full: 280px;
+  --sidebar-compact: 85px;
+  --header-height: 75px;
+  --border-radius: 12px;
+}
+
+.admin-panel-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--admin-background);
+  position: relative;
+}
+
+/* Overlay for mobile sidebar */
+.panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--admin-transition);
+}
+
+.overlay-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Main content area */
+.panel-main-container {
+  flex-grow: 1;
+  margin-left: var(--sidebar-full);
+  transition: var(--admin-transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-panel-wrapper.panel-collapsed .panel-main-container {
+  margin-left: var(--sidebar-compact);
+}
+
+/* Header styles */
+.panel-header-bar {
+  height: var(--header-height);
+  background: var(--admin-surface);
+  border-bottom: 1px solid var(--admin-border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.panel-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 8px;
+  transition: var(--admin-transition);
+}
+
+.panel-menu-toggle:hover {
+  background-color: var(--admin-background);
+}
+
+.menu-toggle-line {
+  width: 22px;
+  height: 2px;
+  background-color: var(--admin-text);
+  transition: var(--admin-transition);
+}
+
+.panel-header-title h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-primary);
+  margin: 0;
+}
+
+.panel-breadcrumb {
+  font-size: 0.875rem;
+  color: var(--admin-text-light);
+  margin-top: 0.25rem;
+}
+
+/* Content area */
+.panel-content-area {
+  flex-grow: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Responsive Design */
+/* Large Tablets (992px and below) */
+@media (max-width: 992px) {
+  .admin-panel-wrapper.mobile-view .panel-main-container {
+    margin-left: 0;
+  }
+  
+  .panel-menu-toggle {
+    display: flex;
+  }
+  
+  .panel-header-bar {
+    padding: 0 1.5rem;
+  }
+  
+  .panel-content-area {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .panel-header-bar {
+    padding: 0 1.25rem;
+    gap: 1.5rem;
+  }
+  
+  .panel-content-area {
+    padding: 1.25rem;
+  }
+  
+  .panel-header-title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Phones (576px and below) */
+@media (max-width: 576px) {
+  .panel-header-bar {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .panel-content-area {
+    padding: 1rem;
+  }
+  
+  .panel-header-title h1 {
+    font-size: 1.25rem;
+  }
+  
+  .panel-breadcrumb {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small Mobile Phones (400px and below) */
+@media (max-width: 400px) {
+  .panel-header-bar {
+    height: 65px;
+  }
+  
+  .panel-content-area {
+    padding: 0.875rem;
+  }
+}
+
+/* Desktop hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .admin-panel-wrapper:not(.mobile-view).panel-collapsed .sidebar:hover {
+    width: var(--sidebar-full);
+    box-shadow: var(--admin-shadow-lg);
+  }
+  
+  .panel-menu-toggle:hover .menu-toggle-line {
+    background-color: var(--admin-primary);
+  }
+}

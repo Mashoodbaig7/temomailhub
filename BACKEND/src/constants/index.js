@@ -1,0 +1,48 @@
+import "dotenv/config";
+
+const ENV = (process?.env || {});
+
+const DELETE_DATA_MESSAGE = 'Data deleted successfully';
+const UPDATE_DATA_MESSAGE = 'Data updated successfully';
+const INTERNAL_SERVER_ERROR_MESSAGE = 'Internal server error';
+const POST_DATA_MESSAGE = 'Data added successfully';
+const USER_NOT_FOUND_MESSAGE = 'User not found';
+const INVALID_CREDENTIALS_MESSAGE = 'Invalid credentials';
+const UNAUTHORIZED_MESSAGE = 'Unauthorized access';
+const USER_DELETED_SUCCESSFULLY = 'User Deleted Successfully';
+const USER_UPDATED_SUCCESSFULLY = 'User Updated Successfully';
+const EMAIL_ALREADY_REGISTERED_MESSAGE = 'Email already registered';
+const INVALID_INPUT_MESSAGE = 'Invalid input data';
+const LOGIN_SUCCESS_MESSAGE = 'Login successful';
+const LOGOUT_SUCCESS_MESSAGE = 'Logout successful';
+const REGISTERED_SUCCESS_MESSAGE = 'Registered successfully';
+const ALL_FIELDS_REQUIRED_MESSAGE = 'All fields are required';
+const INVALID_PASSWORD_MESSAGE = 'Invalid password';
+const INVALID_TOKEN_MESSAGE = 'Invalid token';
+const TOKEN_EXPIRED_MESSAGE = 'Token expired';
+const TOKEN_MISSING_MESSAGE = 'Token missing';
+const EMAIL_WEBHOOK_SECRET = ENV.EMAIL_WEBHOOK_SECRET || ENV.WEBHOOK_SECRET;
+
+export {
+    ENV,
+    DELETE_DATA_MESSAGE,
+    UPDATE_DATA_MESSAGE,
+    INTERNAL_SERVER_ERROR_MESSAGE,
+    POST_DATA_MESSAGE,
+    USER_NOT_FOUND_MESSAGE,
+    INVALID_CREDENTIALS_MESSAGE,
+    UNAUTHORIZED_MESSAGE,
+    USER_DELETED_SUCCESSFULLY,
+    USER_UPDATED_SUCCESSFULLY,
+    EMAIL_ALREADY_REGISTERED_MESSAGE,
+    INVALID_INPUT_MESSAGE,
+    LOGIN_SUCCESS_MESSAGE,
+    LOGOUT_SUCCESS_MESSAGE,
+    REGISTERED_SUCCESS_MESSAGE,
+    ALL_FIELDS_REQUIRED_MESSAGE,
+    INVALID_PASSWORD_MESSAGE,
+    INVALID_TOKEN_MESSAGE,
+    TOKEN_EXPIRED_MESSAGE,
+    TOKEN_MISSING_MESSAGE,
+    EMAIL_WEBHOOK_SECRET
+};

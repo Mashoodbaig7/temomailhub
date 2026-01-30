@@ -1,0 +1,374 @@
+/* Contact.css - Professional & Clean */
+
+.contact-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e0e3e8 100%);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(22, 66, 60, 0.15);
+}
+
+/* Form Section */
+.contact-form-section {
+  padding: 50px;
+  background: linear-gradient(135deg, #16423C, #6A9C89);
+  color: white;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.form-title i {
+  font-size: 2.2rem;
+  color: #E9EFEC;
+}
+
+.form-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #E9EFEC;
+}
+
+.form-group label i {
+  font-size: 1.1rem;
+  width: 24px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #E9EFEC;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(233, 239, 236, 0.1);
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+/* Success Message */
+.success-message {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideDown 0.3s ease;
+}
+
+.success-message i {
+  color: z#4CAF50;
+  font-size: 1.2rem;
+}
+
+.success-message span {
+  color: #E9EFEC;
+  font-weight: 500;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Submit Button */
+.form-submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background: #E9EFEC;
+  color: #16423C;
+  border: none;
+  padding: 18px 45px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(233, 239, 236, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Info Section */
+.contact-info-section {
+  padding: 50px 40px;
+  background: #f8faf9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 2px solid #E9EFEC;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.info-card:last-child {
+  margin-bottom: 0;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+  border-color: #6A9C89;
+  box-shadow: 0 10px 30px rgba(106, 156, 137, 0.1);
+}
+
+.info-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #16423C, #6A9C89);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  font-size: 1.2rem;
+  color: #16423C;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-content p,
+.info-content a {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.info-content a {
+  color: #16423C;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.info-content a:hover {
+  text-decoration: underline;
+}
+
+/* Access Check Loading */
+.access-check-loading {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contact-info-section {
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px 10px;
+  }
+
+  .contact-form-section,
+  .contact-info-section {
+    padding: 40px 30px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .info-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .contact-form-section,
+  .contact-info-section {
+    padding: 30px 20px;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-description {
+    font-size: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 14px 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 16px 30px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .contact-page {
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  .contact-container {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: block !important;
+  }
+
+  .contact-form-section {
+    background: white !important;
+    color: #16423C !important;
+  }
+
+  .form-title i {
+    color: #16423C !important;
+  }
+
+  .form-group label {
+    color: #16423C !important;
+  }
+
+  .form-input,
+  .form-textarea {
+    background: white !important;
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .submit-btn {
+    display: none !important;
+  }
+}

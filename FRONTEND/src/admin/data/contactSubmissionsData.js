@@ -1,0 +1,42 @@
+export const contactSubmissionsData = [
+  {
+    id: 1,
+    name: 'Alice Johnson',
+    email: 'alice.j@example.com',
+    subject: 'Issue with Private Domain',
+    message: 'I am having trouble setting up my private domain. Can you please assist?',
+    date: '2023-08-28',
+  },
+  {
+    id: 2,
+    name: 'Robert Brown',
+    email: 'robert.b@example.com',
+    subject: 'Billing Question',
+    message: 'I was charged twice for my subscription this month. Please investigate.',
+    date: '2023-08-28',
+  },
+  {
+    id: 3,
+    name: 'Charlie Davis',
+    email: 'charlie.d@example.com',
+    subject: 'Feature Request: Dark Mode',
+    message: 'I would love to see a dark mode option in the dashboard. It would be easier on the eyes.',
+    date: '2023-08-27',
+  },
+  {
+    id: 4,
+    name: 'Diana Miller',
+    email: 'diana.m@example.com',
+    subject: 'Feedback on New UI',
+    message: 'The new user interface is fantastic! So much cleaner and more intuitive. Great job!',
+    date: '2023-08-26',
+  },
+    {
+    id: 5,
+    name: 'Ethan Wilson',
+    email: 'ethan.w@example.com',
+    subject: 'Cannot Log In',
+    message: 'I am unable to log into my account. I have tried resetting my password, but it is not working.',
+    date: '2023-08-25',
+  },
+];

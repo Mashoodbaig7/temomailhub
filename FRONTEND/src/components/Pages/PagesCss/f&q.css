@@ -1,0 +1,81 @@
+/* FAQ Accordion Styles */
+.rc-accordion-card {
+    border: 2px solid #E9EFEC;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.rc-accordion-card:hover {
+    border-color: #6A9C89;
+    box-shadow: 0 5px 15px rgba(106, 156, 137, 0.1);
+}
+
+.rc-accordion-header {
+    cursor: pointer;
+}
+
+.rc-accordion-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.rc-accordion-toggle:hover {
+    background: #f8f9fa;
+}
+
+.rc-accordion-toggle.active {
+    background: linear-gradient(135deg, #16423C, #2a5b52);
+    color: white;
+}
+
+.rc-accordion-toggle.active .rc-accordion-title {
+    color: white;
+}
+
+.rc-accordion-toggle.active .rc-accordion-icon {
+    color: white;
+    transform: rotate(180deg);
+}
+
+.rc-accordion-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #16423C;
+    margin: 0;
+    flex: 1;
+}
+
+.rc-accordion-icon {
+    color: #6A9C89;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.rc-collapse {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.rc-collapse.show {
+    height: auto;
+}
+
+.rc-accordion-body {
+    padding: 0 30px 25px;
+    background: white;
+}
+
+.rc-accordion-body p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+

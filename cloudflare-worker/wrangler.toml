@@ -1,0 +1,16 @@
+name = "email-worker"
+main = "email-worker.js"
+compatibility_date = "2026-01-21"
+
+# Email routing handler
+[email]
+
+# Environment variables
+[vars]
+# Set these in Cloudflare Dashboard or via wrangler secret
+# BACKEND_API_URL = "http://localhost:8080"
+# WEBHOOK_SECRET = "your-secret-key-here"
+
+# For local development
+[env.development]
+vars = { BACKEND_API_URL = "http://localhost:8080", WEBHOOK_SECRET = "your-secret-key-here" }

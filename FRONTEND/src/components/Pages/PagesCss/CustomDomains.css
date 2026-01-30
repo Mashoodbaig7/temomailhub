@@ -1,0 +1,573 @@
+/* Custom Domains Page Styles */
+
+.custom-domains-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.custom-domains-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.custom-domains-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.custom-domains-header .subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Add Domain Section */
+.add-domain-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.add-domain-form .input-group {
+    display: flex;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.domain-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+}
+
+.domain-input:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.domain-input::placeholder {
+    color: #95a5a6;
+}
+
+.add-domain-btn {
+    padding: 15px 30px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.add-domain-btn:hover:not(:disabled) {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.add-domain-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.help-text {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Domains List Section */
+.domains-list-section {
+    margin-bottom: 40px;
+}
+
+.domains-list-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.loading-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px dashed #dee2e6;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* Domains Grid */
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Domain Card */
+.domain-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.domain-card-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.domain-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.domain-name {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 0;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-failed {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-suspended {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.domain-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-verify,
+.btn-delete,
+.btn-retry {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-verify {
+    background: #3498db;
+    color: white;
+}
+
+.btn-verify:hover:not(:disabled) {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn-verify:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+.btn-retry {
+    background: #f39c12;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-retry:hover {
+    background: #e67e22;
+}
+
+/* Domain Card Body */
+.domain-card-body {
+    padding: 20px;
+}
+
+.domain-details {
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.detail-value {
+    color: #6c757d;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Nameservers Section */
+.nameservers-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+.toggle-instructions-btn {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.toggle-instructions-btn:hover {
+    background: #5568d3;
+}
+
+.instructions-content {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.step-section {
+    margin-bottom: 25px;
+}
+
+.step-section:last-child {
+    margin-bottom: 0;
+}
+
+.step-section h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.step-section p {
+    color: #495057;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.nameservers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nameserver-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.nameserver-item code {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn-copy {
+    padding: 6px 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-copy:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+.instructions-list {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.instructions-list li {
+    margin-bottom: 8px;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Success/Error Messages */
+.success-message,
+.error-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.success-message {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.success-message p {
+    color: #155724;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.success-message code {
+    background: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #155724;
+}
+
+.error-message {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.error-message p {
+    color: #721c24;
+    margin: 0 0 10px 0;
+}
+
+.error-message p:last-child {
+    margin-bottom: 0;
+}
+
+.error-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Info Section */
+.info-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    border-radius: 15px;
+    color: white;
+}
+
+.info-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.info-card h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-domains-container {
+        padding: 20px 15px;
+    }
+
+    .custom-domains-header h1 {
+        font-size: 2rem;
+    }
+
+    .add-domain-form .input-group {
+        flex-direction: column;
+    }
+
+    .add-domain-btn {
+        width: 100%;
+    }
+
+    .domain-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Links */
+.help-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.help-text a:hover {
+    color: #f0f0f0;
+}
+
+.step-section a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.step-section a:hover {
+    text-decoration: underline;
+}
